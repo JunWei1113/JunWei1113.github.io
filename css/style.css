@@ -25,7 +25,7 @@ section {
     border-radius: 5px;
 }
 article{
-    width: 80%;
+
     float: left;
     font-family: Arial, Helvetica, sans-serif;
     color:#000000;
@@ -33,8 +33,9 @@ article{
     height: auto;
 }
 aside{
-    width: 20%;
+    width: auto;
     float: left;
+
 }
 footer {
     text-align: center;
