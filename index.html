@@ -2,17 +2,73 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人網站</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+            background: #ffffff;
+            margin: 20px;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #35424a;
+            color: #ffffff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-<p>我的網站</p>
+<header>
+    <h1>歡迎來到我的個人網站</h1>
+    <nav>
+        <a href="#about">關於我</a>
+        <a href="#portfolio">作品集</a>
+        <a href="#contact">聯絡我</a>
+    </nav>
+</header>
 
+<section id="about">
+    <h2>關於我</h2>
+    <p>這裡是關於我的簡介，您可以寫下您的背景、興趣和專業技能。</p>
+</section>
 
+<section id="portfolio">
+    <h2>作品集</h2>
+    <p>在這裡展示您的作品，您可以添加圖片或鏈接到您的項目。</p>
+</section>
 
-<script src="js/bootstrap.js"></script>
+<section id="contact">
+    <h2>聯絡我</h2>
+    <p>如果您有任何問題，請通過電子郵件聯絡我：<a href="mailto:your-email@example.com">your-email@example.com</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2025 您的名字. 版權所有.</p>
+</footer>
 </body>
 </html>
