@@ -31,9 +31,10 @@ article{
     color:#000000;
     padding-bottom: 15px;
     height: auto;
+    width: 70%;
 }
 aside{
-    width: auto;
+    width: 30%;
     float: left;
 
 }
