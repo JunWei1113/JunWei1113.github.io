@@ -2,43 +2,61 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #7ca1b8;
 }
 header {
-    background: #35424a;
+    width: 100%;
+    background: #7ca1b8;
     color: #ffffff;
-    padding: 10px 0;
-    text-align: center;
+    padding: 10px 20px;
+    text-align: left;
+    top:0;    
 }
+/*導覽區*/
 nav {
-    margin: 20px 0;
+    margin: 20px;
+    text-align: right;
 }
+/*導覽區*/
 nav a {
-    margin: 0 15px;
+    margin: 10px;
     color: #ffffff;
-    text-decoration: none;
+    text-decoration: none;       
+}
+/*超連結文字效果*/
+header a:hover{
+    color: #000000;
+	
 }
 section {
-    padding: 20px;
+    clear: left;
+    padding: 10px;
     background: #ffffff;
     margin: 20px;
     border-radius: 5px;
 }
-article{
+/*照片*/
+.placehoider{
+    padding: 0px;
+    width:20%;
+    float:"left";
+    border: #000000;
+    border-radius: 1px;
+    border-style: solid;
+}
 
+article{
+    width: 70%;
     float: left;
     font-family: Arial, Helvetica, sans-serif;
     color:#000000;
     padding-bottom: 15px;
     height: auto;
-    width: 70%;
+    
 }
-aside{
-    width: 30%;
-    float: left;
 
-}
 footer {
+    clear: left;
     text-align: center;
     padding: 10px 0;
     background: #35424a;
