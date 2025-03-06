@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,7 +6,7 @@ body {
     background-color: #7ca1b8;
 }
 header {
-    width: 100%;
+    width: auto;
     background: #7ca1b8;
     color: #ffffff;
     padding: 10px 20px;
@@ -40,6 +41,11 @@ header a:hover{
     color: #000000;
 	
 }
+.center{
+    background-color: #7ca1b8;
+    height: 100%;
+    align-content: center;
+}
 section {
     overflow: auto;
     padding: 10px;
@@ -47,6 +53,7 @@ section {
     margin:20px;
     border-radius: 5px;
     column-count: 2;
+    
 }
 /*側邊頭像*/
 aside{
@@ -102,26 +109,38 @@ hr{
     box-shadow: inset 0 10px 10px -10px;
 }
 footer {
-    column-count: 4;
+    
     clear: left;
     text-align: center;
     padding: 10px 0;
     background: #7ca1b8;
     color: #ffffff;
     position: relative;
-    bottom: 0;
     width: 100%;
     
 }
+.footer-contact{
+    float: left;
+    width: 25%;
+    height: 80px;
+    line-height:5px;
+    a{
+    text-decoration: none;
+    color: #fff;
+    align-content: center;
+    
+    }
+    p{
+        line-height: 80px;
+    }
+}
 .footer-menu{
     list-style: none;
-    float:left;
-    
-    width: 25%;
-    overflow: auto;
+    align-content: center;  
+    padding-right:20px;  
     li{
-      float: left;
-      margin-right: 1em;
+      display: inline-block;
+      margin-right:20px ;
     }
     img{
         height: 30px;
