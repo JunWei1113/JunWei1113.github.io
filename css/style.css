@@ -328,3 +328,7 @@ width: 80%;
 .content {
     flex: 2;
 }
+canvas{
+    box-shadow: black 10px 10px 50px;
+    margin: auto;
+}
