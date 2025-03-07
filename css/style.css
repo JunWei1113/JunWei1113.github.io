@@ -104,7 +104,6 @@ aside{
 /*文字內容*/
 article{
     flex: 2;
-   
     width: 90%;
     float: left;
     font-family: Arial, Helvetica, sans-serif;
@@ -256,4 +255,49 @@ footer {
     .footer-contact {
         width: 100%;
     }
+}
+.article_contact{
+    flex: 2;
+    align-self: start;
+}
+.article_contact a{
+    color: #000;
+    text-decoration: none;
+}
+
+.aside_contact{
+    flex: 2;
+    align-items:center;
+}
+
+.contact-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+.contact-form h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contact-form button:hover {
+    background: #0056b3;
 }
