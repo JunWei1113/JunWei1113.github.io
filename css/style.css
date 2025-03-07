@@ -301,3 +301,30 @@ footer {
 .contact-form button:hover {
     background: #0056b3;
 }
+.container{
+width: 80%;
+           max-width: 1200px;
+           margin: auto;
+           padding: 20px;
+           background: #7ca1b8;
+}
+.title_about{
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px 0;
+}
+.section_about{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+}
+.section_about h2{
+    flex: 3;
+    font-size: 20px;
+    text-align: center;
+}
+.content {
+    flex: 2;
+}
