@@ -7,7 +7,7 @@ function toggleMenu() {
         menu.style.display = "flex";
     }
 }
-//聯絡我
+//聯絡我表單
 function validateForm() {
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
@@ -24,4 +24,18 @@ function validateForm() {
     }
     alert("表單已成功提交！");
     return true;
+}
+//回頂部按鈕
+window.onscroll = function() {scrollFunction()};
+ 
+function scrollFunction() {console.log(121);
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("Topbtn").style.display = "block";
+    } else {
+        document.getElementById("Topbtn").style.display = "none";
+    }
+}
+function goTop(){
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
