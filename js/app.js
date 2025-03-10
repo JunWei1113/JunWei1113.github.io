@@ -173,4 +173,5 @@ function playAgain(event) {
         location.reload();
     }
 }
+
 startGame();
