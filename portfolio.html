@@ -19,19 +19,35 @@
         <a href="contact.html">聯絡我</a>
     </nav>
 </header>
-<div class="center">
-<section>
-    <img src="img/working.jpg">
-    <a href="#snake"></a>
-</section>
-</div>
-<div style="align-items:start; margin:300px">
-    <h1 id="snake">貪吃蛇</h1>
-    <canvas id = "gamesnake" width="400" height="400"></canvas>
-    <h2>玩法說明:</h2>
-    <h2>使用上下左右來控制！<br>先得25分就贏了！</h2>
-    <script src="js/snake.js"></script>
-</div>
+<main>
+    <section class="center">
+        <img src="img/working.jpg" alt="工作圖片" class="responsive-img">
+    </section>
+    
+    <section class="center_game game-links">
+        <h3>嘗試做遊戲</h3>
+        <div class="game-links-container">
+            <a href="#bingo">終極密碼</a>
+            <a href="#snake">貪食蛇</a>
+        </div>
+    </section>
+    
+    <section id="bingo" class="game-section">
+        <h1>終極密碼</h1>
+    </section>
+    
+    <section id="snake" class="game-section">
+        <h1>貪吃蛇</h1>
+        <div class="flex-container">    
+            <canvas id="gamesnake" width="400" height="400"></canvas>
+            <div>
+                <h2>玩法說明:</h2>
+                <p>使用上下左右來控制！<br>先得 25 分就贏了！</p>
+            </div>
+        </div>
+        <script src="js/snake.js"></script>
+    </section>
+</main>
 <button onclick="goTop()" id="Topbtn">︿<br>回頂部</button>
 <hr>
 <footer>
