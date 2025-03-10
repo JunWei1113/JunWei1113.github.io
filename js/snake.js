@@ -21,7 +21,7 @@ function startGame() {
     setTimeout(startGame, 1000/speed);//重複跑上述內容
     const onkeydown = (e) => {
         // 阻止上下左右键触发浏览器滚动条的默认行为,
-          const keyCodes = [40, 39, 38, 37];
+          const keyCodes = [40, 39, 38, 37, 32];
           if (keyCodes.includes(e.keyCode)) { 
             e.preventDefault(); 
           }
