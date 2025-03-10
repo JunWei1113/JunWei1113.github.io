@@ -1,26 +1,38 @@
 function startGame() {
-    snakePosition();
-    let lose = isOver();
+    snakePosition();//管理與調整snake的位置
+    let lose = isOver();//判斷遊戲結束沒
     if(lose){
-        document.body.addEventListener('keydown', playAgain);
+        document.body.addEventListener('keydown', playAgain);//確認是否再玩一次
         return;
     }
-    clearScreen();
+    clearScreen();//初始化遊戲畫面
 
-    checkColli();
-    let win = isWin();
+    checkColli();//確認蛇和蘋果的碰撞
+    let win = isWin();//確認勝利條件
     if(win){
         return;
     }
-    drawApple();
-    drawSnake();
-    drawScore();
+    drawApple();//生產蘋果方塊
+    drawSnake();//生產蛇方塊
+    drawScore();//顯示分數
     
-    setSpeed();
+    setSpeed();//更改速度
     
-    setTimeout(startGame, 1000/speed);
+    setTimeout(startGame, 1000/speed);//重複跑上述內容
+    const onkeydown = (e) => {
+        // 阻止上下左右键触发浏览器滚动条的默认行为,
+          const keyCodes = [40, 39, 38, 37];
+          if (keyCodes.includes(e.keyCode)) { 
+            e.preventDefault(); 
+          }
+    }
+    window.addEventListener('keydown', onkeydown);
+    return () => {
+      window.removeEventListener('keydown', onkeydown);
+    };
+
 }
-const canvas = document.getElementById('game');
+const canvas = document.getElementById('gamesnake');
 const ctx = canvas.getContext('2d');
 class SnakePart{
     constructor(x, y){
@@ -78,6 +90,7 @@ function playAgain(event) {
 function clearScreen() {
     ctx.fillStyle= 'black';
     ctx.fillRect(0, 0, 400, 400);
+    
 }
 function checkColli() {
     if(appleX === headX && appleY === headY){
@@ -135,7 +148,7 @@ function setSpeed() {
 document.body.addEventListener('keydown', keyDown);
 
 function keyDown(event) {
-
+   
     //go up
     if(event.keyCode== 38){
         if(yV == 1) 
@@ -167,6 +180,7 @@ function keyDown(event) {
         yV = 0;
         xV = 1;
     }
+    
 }
 function playAgain(event) {
     if(event.keyCode == 32){
