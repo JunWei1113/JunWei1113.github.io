@@ -262,10 +262,12 @@ footer {
 .article_contact{
     flex: 2;
     align-self: start;
+    display: table-cell;
+    vertical-align: middle;
 }
 .article_contact a{
     color: #000;
-    text-decoration: none;
+    text-decoration: none; 
 }
 
 .aside_contact{
