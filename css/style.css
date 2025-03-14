@@ -323,6 +323,9 @@ width: 80%;
     border-bottom: 1px solid #ccc;
     padding: 20px 0;
 }
+.section_about li{
+    text-align: left;
+}
 .section_about h2{
     flex: 3;
     font-size: 20px;
@@ -330,6 +333,7 @@ width: 80%;
 }
 .content {
     flex: 2;
+    
 }
 canvas{
     box-shadow: black 10px 10px 50px;
