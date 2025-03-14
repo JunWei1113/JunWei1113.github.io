@@ -375,11 +375,49 @@ canvas{
     justify-content: center;
 }
 .game-section {
-    margin: 20px 0;
+    margin: 20px auto;
     align-self: center;
+    width: 450px;
+    background: linear-gradient(135deg,#00BFFF, #8A2BE2);
+    background-size: 200% 200%;
+    animation: gradient 6s ease infinite;
+}
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
 }
 .game-section h1{
-    align-self: center;
+    align-self: center;    
+}
+/* 輸入框 */
+#guessnum {
+    width: 200px;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    border: 2px solid #FFD700;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#guessnum:focus {
+    border-color: #ff3d68;
+    box-shadow: 0 0 8px rgba(255, 61, 104, 0.5);
+}
+
+/* 按鈕美化 */
+.game-section button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#ansbtn:hover{
+    background-color:#FFD700;
+    box-shadow: 0 4px 10px #917c09;
 }
 .flex-container {
     display: flex;
