@@ -5,34 +5,33 @@ let userans =0;
 let btn = document.getElementById("ansbtn") 
 const result = document.querySelector("#result")
 
-randomAnaswer();
-function randomAnaswer(){
- answer = Math.floor(Math.random()*100)+1
+randomAnswer();
+function randomAnswer(){
+ answer = Math.floor(Math.random()*100)+1;
  console.log(answer);
 }
 
 
 window.addEventListener("keyup",function(e){
-    if(e.keyCode == 13){
+    if(e.key === "Enter"){
         guessStar();
     }
 })//Enter鍵開始
 
 function guessStar(){    
-    let guess = document.getElementById("guessnum");
+    const guess = document.getElementById("guessnum");
     console.log(Number(guess.value));
-    userans = guess.value
-    
-    if (guess.value ==""||guess.value<low || guess.value > upper){
-        result.textContent="請重新輸入"+low+"~"+upper+"的整數";
-    }else if(guess.value<answer){
-           low = userans;
+    userans = Number(guess.value);  
+    if (userans==""||userans<low || userans > upper){
+        result.textContent="請重新輸入"+low+"~"+upper+"的整數";        
+    }else if(guess.value < answer){
+            low = userans;
            result.textContent="請輸入"+low+"~"+upper+"的整數";
-           times+=1;
-    }else if(guess.value>answer){
+           times+=1;               
+    }else if(guess.value > answer){       
             upper = userans;
             result.textContent="請輸入"+low+"~"+upper+"的整數";
-            times+=1;
+            times+=1;           
     }else{
             times+=1
             result.textContent="答對了!答案是:"+answer+"共猜了"+times+"次";
@@ -50,7 +49,7 @@ function restar(){
     upper =100;
     times =0; 
     userans =0;
-    randomAnaswer();
+    randomAnswer();
     guessStar();
     console.log(answer);
     guessnum.disabled = false;
