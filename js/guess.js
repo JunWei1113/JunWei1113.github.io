@@ -51,8 +51,8 @@ function restar(){
     times =0; 
     userans =0;
     randomAnaswer();
+    guessStar();
     console.log(answer);
-    
     guessnum.disabled = false;
     document.getElementById("reBtn").disabled =true;
 }
