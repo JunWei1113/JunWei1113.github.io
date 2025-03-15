@@ -1,39 +1,29 @@
+let gameLoop;
 function startGame() {
+    canChangeDirection = true;
     snakePosition();//管理與調整snake的位置
     let lose = isOver();//判斷遊戲結束沒
     if(lose){
         document.body.addEventListener('keydown', playAgain);//確認是否再玩一次
+        clearInterval(gameLoop); // 停止遊戲迴圈
         return;
     }
-    clearScreen();//初始化遊戲畫面
 
+    clearScreen();//初始化遊戲畫面
     checkColli();//確認蛇和蘋果的碰撞
     let win = isWin();//確認勝利條件
     if(win){
+        clearInterval(gameLoop); // 停止遊戲迴圈
         return;
     }
     drawApple();//生產蘋果方塊
     drawSnake();//生產蛇方塊
     drawScore();//顯示分數
-    
-    setSpeed();//更改速度
-    
-    setTimeout(startGame, 1000/speed);//重複跑上述內容
-    const onkeydown = (e) => {
-        // 阻止上下左右键触发浏览器滚动条的默认行为,
-          const keyCodes = [40, 39, 38, 37, 32];
-          if (keyCodes.includes(e.keyCode)) { 
-            e.preventDefault(); 
-          }
-    }
-    window.addEventListener('keydown', onkeydown);
-    return () => {
-      window.removeEventListener('keydown', onkeydown);
-    };
-
 }
+
 const canvas = document.getElementById('gamesnake');
 const ctx = canvas.getContext('2d');
+
 class SnakePart{
     constructor(x, y){
         this.x = x;
@@ -41,8 +31,19 @@ class SnakePart{
     }
 }
 
-let speed = 8;
+const onkeydown = (e) => {
+    // 阻止上下左右键触发浏览器滚动条的默认行为,
+      const keyCodes = [40, 39, 38, 37, 32];
+      if (keyCodes.includes(e.keyCode)) { 
+        e.preventDefault(); 
+      }
+}
 
+window.addEventListener('keydown', onkeydown);
+document.body.addEventListener('keydown', keyDown);
+
+let speed = 5;
+let canChangeDirection = true;
 let tileCount = 20;
 let tileSize = canvas.width / tileCount - 2;
 let headX = 10;
@@ -55,15 +56,17 @@ let appleY = 5;
 
 let xV = 0;
 let yV = 0;
-
 let score = 0;
+let move_dir = 0; 
+
 function snakePosition() {
     headX = headX + xV;
     headY = headY + yV;
 }
+
 function isOver() {
     let Over = false;
-    if(headX < 0 || headX == 20 || headY < 0 || headY == 20){
+    if(headX < 0 || headX == tileCount || headY < 0 || headY == tileCount){
         Over = true;
     }
     for(let i = 0; i < snakePart.length; i++){
@@ -90,16 +93,21 @@ function playAgain(event) {
 function clearScreen() {
     ctx.fillStyle= 'black';
     ctx.fillRect(0, 0, 400, 400);
-    
 }
 function checkColli() {
-    if(appleX === headX && appleY === headY){
-        appleX = Math.floor(Math.random() * tileCount);
-        appleY = Math.floor(Math.random() * tileCount);
-        tailLen ++;
-        score ++;
-        if(score > 5 && score % 2 == 0){
-            speed ++;
+    if (appleX === headX && appleY === headY) {
+        let newApplePosition = false;
+        while (!newApplePosition) {
+            appleX = Math.floor(Math.random() * tileCount);
+            appleY = Math.floor(Math.random() * tileCount);
+            // 確保蘋果不會與蛇重疊
+            newApplePosition = !snakePart.some(part => part.x === appleX && part.y === appleY);
+        }
+        tailLen++;
+        score++;
+        if (score % 2 == 0) {
+            speed += 1;
+            updateSpeed();
         }
     }
 }
@@ -135,26 +143,22 @@ function drawSnake() {
     ctx.fillStyle = 'orange';
     ctx.fillRect(headX * tileCount, headY *tileCount, tileSize, tileSize);
 }
+
 function drawScore() {
     ctx.fillStyle = "white";
     ctx.font = "10px Poppins";
     ctx.fillText("Score: " + score, canvas.width-50, 10);
 }
-function setSpeed() {
-    if(score == 5){
-        speed = 10;
-    }    
-}
-document.body.addEventListener('keydown', keyDown);
 
 function keyDown(event) {
-   
+   if(!canChangeDirection) return;
     //go up
     if(event.keyCode== 38){
         if(yV == 1) 
             return;
         yV = -1;
         xV = 0;
+        canChangeDirection = false;
     }
 
     //go down
@@ -163,6 +167,7 @@ function keyDown(event) {
             return;
         yV = 1;
         xV = 0;
+        canChangeDirection = false;
     }
 
     //go left
@@ -171,6 +176,7 @@ function keyDown(event) {
             return;
         yV = 0;
         xV = -1;
+        canChangeDirection = false;
     }
 
     //go right
@@ -179,13 +185,13 @@ function keyDown(event) {
             return;
         yV = 0;
         xV = 1;
+        canChangeDirection = false;
     }
     
 }
-function playAgain(event) {
-    if(event.keyCode == 32){
-        location.reload();
-    }
-}
 
-startGame();
+function updateSpeed() {
+    clearInterval(gameLoop);
+    gameLoop = setInterval(startGame, 1000 / speed);
+}
+updateSpeed();
