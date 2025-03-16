@@ -2,7 +2,7 @@
     const projects = [
         {
             title: "PhotoShop網頁切版",
-            images: ["project1-1.jpg", "project1-2.jpg", "project1-3.jpg"]
+            images: ["img/webbyph.jpg", "img/dog.gif","project1-3.jpg"]
         },
         {
             title: "作品標題 2",
