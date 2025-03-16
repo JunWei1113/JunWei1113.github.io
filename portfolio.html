@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>個人網站</title>
     <link rel="stylesheet" href="css/style.css">
-
+    <style>
+   
+    </style>
 </head>
 <body>
 <header>
@@ -20,9 +22,40 @@
     </nav>
 </header>
 <main>
-    <section class="center">
-        <img src="img/working.jpg" alt="工作圖片" class="responsive-img">
-    </section>
+    <h1>作品集</h1>
+    <div class="portfolio">
+        <!-- 作品卡片 -->
+        <div class="portfolio-item" onclick="openModal(0)">
+            <img src="img/webbyph.jpg" alt="作品1">
+            <p>PhotoShop網頁切版</p>
+        </div>
+    
+        <div class="portfolio-item" onclick="openModal(1)">
+            <img src="project2-thumb.jpg" alt="作品2">
+            <p>作品標題 2</p>
+        </div>
+        <div class="portfolio-item" onclick="openModal(2)">
+            <img src="project2-thumb.jpg" alt="作品3">
+            <p>作品標題 3</p>
+        </div>
+        <div class="portfolio-item" onclick="openModal(3)">
+            <img src="project2-thumb.jpg" alt="作品4">
+            <p>作品標題 4</p>
+        </div>
+        
+    </div>
+    
+    <!-- 模態視窗 -->
+    <div id="modal" class="modal" onclick="closeModal(event)" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">作品標題</h2>
+            <img id="main-image" src="" alt="大圖">
+            <div class="thumbnails"></div>
+        </div>
+    </div>
+    
+    <script src="js/portfolio.js"></script>
     
     <section class="center_game game-links">
         <h3>嘗試做遊戲</h3>

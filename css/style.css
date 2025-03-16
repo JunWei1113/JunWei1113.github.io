@@ -425,3 +425,99 @@ canvas{
     align-items: center;
     gap: 10px;
 }
+/*作品集*/
+.portfolio {
+    
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    width: 200px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-item img {
+    width: 100%;
+}
+
+/* Modal 設計 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    max-width: 90%;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* 主圖片 */
+#main-image {
+    width: 80%;
+    max-width: 600px;
+    margin-bottom: 10px;
+}
+
+/* 縮圖區域 */
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.thumbnails img {
+    width: 80px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.thumbnails img:hover {
+    transform: scale(1.1);
+    border: 2px solid #007bff;
+}
+ /*porfolio響應式設計*/
+ @media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+    }
+    #main-image {
+        width: 100%;
+    }
+    .thumbnails img {
+        width: 60px;
+    }
+}
