@@ -8,7 +8,7 @@
         {
             title: "Figma網頁製作練習",
             images: ["img/screenFigma.png", "img/figmaPrototype.png", "img/byfigma.gif"],
-            caption: "作品說明2"
+            caption: "練習用figma繪製網站及簡易UI設計，並加入互動功能，做出簡易版網頁"
         },
         {
             title: "作品標題 3",
