@@ -2,19 +2,23 @@
     const projects = [
         {
             title: "PhotoShop網頁切版",
-            images: ["img/webbyph.jpg", "img/dog.gif","project1-3.jpg"]
+            images: ["img/wireframe.png", "img/webbyph.jpg","img/buymedemo.png"],
+            caption: "練習先使用PS排版出網頁版面，匯出成網頁後參造切版樣式製作網頁內容"
         },
         {
-            title: "作品標題 2",
-            images: ["project2-1.jpg", "project2-2.jpg", "project2-3.jpg"]
+            title: "Figma網頁製作練習",
+            images: ["img/screenFigma.png", "img/figmaPrototype.png", "img/byfigma.gif"],
+            caption: "作品說明2"
         },
         {
             title: "作品標題 3",
-            images: ["project2-1.jpg", "project2-2.jpg", "project2-3.jpg"]
+            images: ["project2-1.jpg", "project2-2.jpg", "project2-3.jpg"],
+            caption: "作品說明3"
         },
         {
             title: "作品標題 4",
-            images: ["project2-1.jpg", "project2-2.jpg", "project2-3.jpg"]
+            images: ["project2-1.jpg", "project2-2.jpg", "project2-3.jpg"],
+            caption: "作品說明4"
         }
         ];
     let currentProjectIndex = 0;
@@ -30,7 +34,8 @@
         
         document.getElementById("modal-title").textContent = projects[projectIndex].title;
         mainImage.src = projects[projectIndex].images[0];
-            
+        document.getElementById("caption").textContent = projects[projectIndex].caption;    
+
         // 清空舊縮圖
         thumbnailsContainer.innerHTML = "";
         
