@@ -7,11 +7,11 @@
         },
         {
             title: "Figma網頁製作練習",
-            images: ["img/screenFigma.png", "img/figmaPrototype.png", "img/byfigma.gif"],
+            images: ["img/screenFigma.PNG", "img/figmaPrototype.PNG", "img/byfigma.gif"],
             caption: "練習用figma繪製網站及簡易UI設計，並加入互動功能，做出簡易版網頁"
         },
         {
-            title: "作品標題 3",
+            title: "WordPress網站製作",
             images: ["project2-1.jpg", "project2-2.jpg", "project2-3.jpg"],
             caption: "作品說明3"
         },
