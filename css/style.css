@@ -339,7 +339,7 @@ width: 80%;
 }
 canvas{
     box-shadow: black 10px 10px 50px;
-    margin: auto;
+    
 }
 #Topbtn {
     display: none;
@@ -386,9 +386,8 @@ canvas{
     0% { background-position: 0% 50%; }
     100% { background-position: 100% 50%; }
 }
-.game-section h1{
-    align-self: center;    
-}
+   
+
 /* 輸入框 */
 #guessnum {
     width: 200px;
@@ -432,6 +431,7 @@ canvas{
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    font-size:20px;
 }
 
 .portfolio-item {

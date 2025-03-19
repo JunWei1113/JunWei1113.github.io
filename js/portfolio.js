@@ -14,11 +14,6 @@
             title: "WordPress網站製作",
             images: ["img/buymebake-home.png", "img/buymebake-shop.png", "img/buymebake-cart.png"],
             caption: "練習用wordPress架構網站，並用WooCommerce建立商店"
-        },
-        {
-            title: "作品標題 4",
-            images: ["project2-1.jpg", "project2-2.jpg", "project2-3.jpg"],
-            caption: "作品說明4"
         }
         ];
     let currentProjectIndex = 0;
