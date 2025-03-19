@@ -13,7 +13,7 @@ function randomAnswer(){
 
 
 window.addEventListener("keyup",function(e){
-    if(e.key === "Enter"){
+    if(e.key === "Enter" && !btn.disabled){
         guessStar();
     }
 })//Enter鍵開始
@@ -36,6 +36,7 @@ function guessStar(){
             times+=1
             result.textContent="答對了!答案是:"+answer+"共猜了"+times+"次";
             document.getElementById("reBtn").disabled = false;
+            document.getElementById("ansbtn").disabled = true;
             guessnum.disabled = true;
             if(times==1){
                 result.textContent="答對了!答案是:"+answer+"只猜了"+times+"次\r你偷看答案吧!?";
@@ -45,13 +46,16 @@ function guessStar(){
     guess.value = "";   
 }
 function restar(){
-    low = 1 ;
-    upper =100;
-    times =0; 
-    userans =0;
+    low = 1;
+    upper = 100;
+    times = 0;
+    userans = 0;
     randomAnswer();
-    guessStar();
+    
+    result.textContent = "請輸入 1 ~ 100 的整數";
     console.log(answer);
     guessnum.disabled = false;
     document.getElementById("reBtn").disabled =true;
+    document.getElementById("ansbtn").disabled = false;
+    document.getElementById("guessnum").disabled = false;
 }

@@ -440,14 +440,17 @@ canvas{
     border: 1px solid #ddd;
     padding: 10px;
     transition: 0.3s;
+    background-color: #427cb9;
 }
 
 .portfolio-item:hover {
     transform: scale(1.05);
+    background-color: #3c93e4;
 }
 
 .portfolio-item img {
     width: 100%;
+    max-height: 150px;
 }
 
 /* Modal 設計 */
@@ -463,6 +466,8 @@ canvas{
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    
 }
 
 .modal-content {
@@ -472,6 +477,8 @@ canvas{
     text-align: center;
     position: relative;
     border-radius: 10px;
+    max-height: 90%;
+    overflow-y:auto;
 }
 
 .close {
@@ -488,7 +495,10 @@ canvas{
     width: 80%;
     max-width: 600px;
     margin-bottom: 10px;
-    max-height: 540px;
+    max-height: 480px;
+    border:0.5px solid hsla(0, 0%, 69%, 0.39) ;
+    box-shadow: 5px 5px 5px gray;
+    max-height: 480px;
 }
 
 /* 縮圖區域 */
@@ -497,6 +507,7 @@ canvas{
     justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
+    
 }
 
 .thumbnails img {
@@ -504,6 +515,7 @@ canvas{
     cursor: pointer;
     transition: 0.3s;
     border-radius: 5px;
+    border:0.5px solid #000 ;
 }
 
 .thumbnails img:hover {

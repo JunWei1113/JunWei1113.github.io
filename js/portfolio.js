@@ -2,7 +2,7 @@
     const projects = [
         {
             title: "PhotoShop網頁切版",
-            images: ["img/wireframe.png", "img/webbyph.jpg","img/buymedemo.png"],
+            images: ["img/wireframe.png", "img/webbyph.jpg","img/buymeweb.png"],
             caption: "練習先使用PS排版出網頁版面，匯出成網頁後參造切版樣式製作網頁內容"
         },
         {
@@ -12,8 +12,8 @@
         },
         {
             title: "WordPress網站製作",
-            images: ["project2-1.jpg", "project2-2.jpg", "project2-3.jpg"],
-            caption: "作品說明3"
+            images: ["img/buymebake-home.png", "img/buymebake-shop.png", "img/buymebake-cart.png"],
+            caption: "練習用wordPress架構網站，並用WooCommerce建立商店"
         },
         {
             title: "作品標題 4",
