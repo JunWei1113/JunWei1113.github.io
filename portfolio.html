@@ -60,34 +60,10 @@
     <section class="center_game game-links">
         <h3>嘗試做遊戲</h3>
         <div class="game-links-container">
+            <a href="#RPGgame">RPG冒險</a>
             <a href="#bingo">終極密碼</a>
             <a href="#snake">貪食蛇</a>
         </div>
-    </section>
-    
-    <section id="bingo" class="game-section">
-        <h1>終極密碼</h1>
-        <div class="flex-container">
-            <input id="guessnum" type="text" placeholder="請輸入你的答案"></input>
-            <button type="button" id="reBtn" onclick="restar()" disabled>再玩一次</button>
-            <button id="ansbtn" onclick="guessStar()">送出答案</button>
-            <div id="result">請輸入1~100的整數</div>
-            <h2>玩法說明:</h2>
-            <p>輸入1~100的整數，挑戰在最少次數猜中密碼</p>
-        
-        </div>
-        <script src="js/guess.js"></script>
-    </section>
-    <section id="snake" class="game-section">
-        <h1>貪吃蛇</h1>
-        <div class="flex-container">    
-            <canvas id="gamesnake" width="400" height="400"></canvas>
-            <div>
-                <h2>玩法說明:</h2>
-                <p>按任意方向鍵開始，使用上下左右來控制<br>先得 25 分就贏了！</p>
-            </div>
-        </div>
-        <script src="js/snake.js"></script>
     </section>
     
     <section id="RPGgame" class="rpgbody">
@@ -126,6 +102,33 @@
     
       <audio id="bgm" src="./media/exciting-dragon-fight-255084.mp3"  autoplay></audio>
     </section>
+
+    <section id="bingo" class="game-section">
+        <h1>終極密碼</h1>
+        <div class="flex-container">
+            <input id="guessnum" type="text" placeholder="請輸入你的答案"></input>
+            <button type="button" id="reBtn" onclick="restar()" disabled>再玩一次</button>
+            <button id="ansbtn" onclick="guessStar()">送出答案</button>
+            <div id="result">請輸入1~100的整數</div>
+            <h2>玩法說明:</h2>
+            <p>輸入1~100的整數，挑戰在最少次數猜中密碼</p>
+        
+        </div>
+        <script src="js/guess.js"></script>
+    </section>
+    <section id="snake" class="game-section">
+        <h1>貪吃蛇</h1>
+        <div class="flex-container">    
+            <canvas id="gamesnake" width="400" height="400"></canvas>
+            <div>
+                <h2>玩法說明:</h2>
+                <p>按任意方向鍵開始，使用上下左右來控制<br>先得 25 分就贏了！</p>
+            </div>
+        </div>
+        <script src="js/snake.js"></script>
+    </section>
+    
+
 
 </main>
 

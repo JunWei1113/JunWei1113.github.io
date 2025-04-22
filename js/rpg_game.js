@@ -354,14 +354,14 @@ function pick(guess) {
   }
   text.innerText = "你選擇了 " + guess + " 隨機產生10個數字:\n";
   for (let i = 0; i < 10; i++) {
-    text.innerText += numbers[i] + "\n";
+    text.innerText += "  <"+numbers[i] +">  ";
   }
   if (numbers.includes(guess)) {
-    text.innerText += "恭喜猜對了! 將獲得20金幣!";
+    text.innerText += "\n恭喜猜對了! 獲得了20金幣!";
     gold += 20;
     goldText.innerText = gold;
   } else {
-    text.innerText += "你猜錯了! 將扣除10點生命!";
+    text.innerText += "\n你猜錯了! 扣除10點生命!";
     health -= 10;
     healthText.innerText = health;
     if (health <= 0) {
