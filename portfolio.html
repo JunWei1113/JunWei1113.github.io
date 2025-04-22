@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>何維個人網站</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rpg.css">
     <link rel="shortcut icon" href="favicon.ico">
 </head>
 <body>
@@ -88,7 +89,46 @@
         </div>
         <script src="js/snake.js"></script>
     </section>
+    
+    <section id="RPGgame" class="rpgbody">
+        <h1>勇者 RPG 冒險</h1>
+
+        <div class="stat">經驗值: <span id="xpText">0</span></div>
+        <div class="stat">血量: <span id="healthText">100</span></div>
+        <div class="stat">金幣: <span id="goldText">50</span></div>
+      
+        <div id="RPGtext">歡迎來到 <打倒惡龍>。<br>你必須打敗阻止人們離開城鎮的龍。<br>您現在位於城鎮廣場。<br>你想去哪裡？使用按鈕前往。</div>
+      
+        <div class="buttons">
+          <button id="button1">前往商店</button>
+          <button id="button2">前往洞窟</button>
+          <button id="button3">挑戰惡龍</button>
+        </div>
+      
+        <div id="monsterStats">
+          <h3 id="monsterName">怪物</h3>
+          <div>血量: <span id="monsterHealth"></span></div>
+          <img src="media/mute.png" id="musicControlBtn">
+        </div>
+      
+        <label for="difficulty">難度設定:</label>
+        <select id="difficulty">
+          <option value="1">簡單</option>
+          <option value="2" selected>普通</option>
+          <option value="3">困難</option>
+        </select>
+      
+        <div class="save-buttons">
+          <button onclick="saveGame()">儲存進度</button>
+          <button onclick="loadGame()">讀取進度</button>
+          <button onclick="deleteGame()">刪除存檔</button>
+        </div>
+    
+      <audio id="bgm" src="./media/exciting-dragon-fight-255084.mp3" muted autoplay></audio>
+    </section>
+
 </main>
+
 <button onclick="goTop()" id="Topbtn">︿<br>回頂部</button>
 <hr>
 <footer>
@@ -113,5 +153,6 @@
 </footer>
 
 <script async src="js/script.js"></script>
+<script src="js/rpg_game.js"></script>
 </body>
 </html>
