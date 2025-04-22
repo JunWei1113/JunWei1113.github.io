@@ -19,6 +19,7 @@ const musicControlBtn =document.querySelector("#musicControlBtn")
 button1.onclick = goStore;
 button2.onclick = goCave;
 button3.onclick = fightDragon;
+update(locations[0]); // 初始化場景
 return
 }
 // 抓取 HTML 元素
@@ -440,8 +441,8 @@ function deleteGame(){
     }
   }
 
-  musicControlBtn.onclick = controlMusic()
-  
+  musicControlBtn.onclick = controlMusic;
+  //控制音樂停止/播放按鈕
   function controlMusic(){
   const bgm = document.getElementById("bgm");
   if (bgm.paused) {
@@ -451,7 +452,4 @@ function deleteGame(){
     bgm.pause();
     musicControlBtn.src = "media/mute.png"
   }
-  };
-  window.onload = function () {
-    update(locations[0]); // 初始化場景
   };
